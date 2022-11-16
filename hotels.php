@@ -1,6 +1,6 @@
 <?php
 
-class Booking {
+class Hotel {
 
     // ========================= FIELDS =========================
 
@@ -17,3 +17,5 @@ class Booking {
 
     
 }
+
+

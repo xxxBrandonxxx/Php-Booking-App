@@ -1,43 +1,70 @@
-You are approached by a client that is planning on launching a new website which takes information from various hotels and allows users to make a comparison of rates based on the amount of days a user wishes to stay at those hotels.
+/*
 
-As a result the user must be able to input the following data,
+Backend must make use of OOP
+Objects:
+User
+Hotel (you are a booking te Commodore Hotel Daily Rate:R350 Total: R1050 for 3 days)
+Booking
+make a class for each
 
- 
+All classes are made upfront
+All the Instances for the hotel are made beforehand
+The instance for the user class is made after the form has been filled in in function 1
+the instance of the booking class will mbe made at the end during function 6
 
-First name: Required
 
-Surname: Required
 
-Email address : Required
 
+
+
+Function 1:
+the form must have frontend validation
+function to take user inputs
+
+Input user gives:
+First name: required
+Surname : required
+Email address : required
 NB Number of days must be greater than 0
+check in date : required
+check out date : required
+compare (button)
+retrieve info and make user object form the user class
 
-Check-in date : Required
+Function 2:
+function that takes in the chosen hotel
+input user gives;
+Hotel : required
 
-Check-out date : Required
 
-Hotel : Required
+Function 3:
 
- 
+Daily rate should be used to calculate the total cost,
+Info needed:
+daily rate of hotel
+duration of stay -> get info from form , check out date minus check in date,
 
-The form must have frontend validation the site must be responsive and the backend must make use of OOP, contributing to a modular and maintainable codebase.
 
-Each hotel should have a different daily rate. This daily rate should be used to calculate the total cost and must be displayed inside the correct column.
+Function 4:
 
-For example:
+Hotel display function:
+you are booking the (Whatever) Hotel
+Daily rate: R350
+Total : 1050
+Hotels below or next to each other with all there features listed includes pool,bar,kid friendly etc as well as the diffrences in rate,
+At this stage the user is then able to select hotel and presented with a book button
 
-You are booking The Commodore Hotel
 
-Number of days: 3
+Function 5:
 
-Daily Rate: R350
+Compare function:
+When the user clicks compare button , the data entered is not lost but is carried through to the next screen,
 
-Total: R1050.00
+Function 6:
 
-COMPARE (button)
+When the user clicks the book button an email will be populated witch will contain the users choice and all user details for hotel booking manager to follow up on
+make a booking object from the booking class
 
-When the user clicks the Compare button, the data entered is not lost but is carried through to the next screen. On the next screen the user is presented with a  comparison of the two hotels next to each other with all of their features listed including Pool, bar, kid friendly etc as well as the difference in rates.
 
-At this stage the user is then able to select either Hotel A or Hotel B and presented with a Book button
 
-When the user clicks the Book button an email will be populated which will contain the user's choice and all user details for the Hotel Bookings Manager to follow up on.
+*/
