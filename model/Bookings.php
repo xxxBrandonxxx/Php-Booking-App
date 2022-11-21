@@ -54,7 +54,40 @@ class Booking
     }
 
     public static function showBookings()
-    
+    {
+
+        $userId = $_SESSION['LoggedInUser']['id'];
+        global $connect;
+        $sql = "SELECT * FROM bookings JOIN hotels ON bookings.hotel_id = hotels.id WHERE bookings.customer_id = $userId";
+        $result = $connect->query($sql);
+
+        if ($result) {
+
+            echo '
+            <div class="table-responsive m-5">
+                <table class="table table-hover table-responsive-md">
+                <thead>
+                <tr>
+                    <th>Booking No</th>
+                    <th>Place Name</th>
+                    <th>Check In Date</th>
+                    <th>Check Out Date</th>
+                    <th>Total Paid</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">';
+
+            // Close connection
+            mysqli_close($connect);
+        } else {
+
+            echo "there is an error please revisit page";
+
+            // Close connection
+            mysqli_close($connect);
+        }
+    }
 
 
     // duration of stay calculation
