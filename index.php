@@ -1,56 +1,71 @@
-<?php include "functions.php" ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
-</head>
-<body>
-<h1 class="text-center">Register or Login</h1>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6">Register:
-                <form action="process-register.php" method="post">
-                    <div class="mb-3">
-                        <label for="RegInputName" class="form-label">Name*</label>
-                        <input type="text" name="RegInputName" class="form-control" id="RegInputName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="RegInputSurname" class="form-label">Surname</label>
-                        <input type="text" name="RegInputSurname" class="form-control" id="RegInputSurname">
-                    </div>
-                    <div class="mb-3">
-                        <label for="RegInputEmail" class="form-label">Email*</label>
-                        <input type="email" name="RegInputEmail" class="form-control" id="RegInputEmail" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="RegInputPassword" class="form-label">Password*</label>
-                        <input type="password" name="RegInputPassword" class="form-control" id="RegInputPassword" required>
-                    </div>
-                    <button type="submit" name='Submit' class="btn btn-dark">Submit</button>
-                </form>
-            </div>
+<link rel="stylesheet" href="static/css/style.css">
+<?php include __DIR__ . "/templates/head.php";
+//if user is logged in
+if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true) {
+    ("location: home.php");
+    exit;
+}
+//form on index page
+?>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand">Welcome to booking center</a>
+    </nav>
+</header>
 
-            <div class="col-lg-6">Customer/Staff Login:
-                <form action="process-login.php" method="post">
-                    <div class="mb-3">
-                        <label for="InputEmail" class="form-label">Email*</label>
-                        <input type="email" class="form-control" name="LoginEmail" id="InputEmail" required>
+<body>
+    <h1 class="text-center">Register or Login</h1>
+    <div class="container text-right">
+        <div class="row">
+            <div>Register:
+                <html>
+
+                <head>
+                    <title>User Registration | PHP</title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+                </head>
+
+                <body>
+
+                    <div>
+                        <?php
+
+                        ?>
                     </div>
-                    <div class="mb-3">
-                        <label for="InputPassword" class="form-label">Password*</label>
-                        <input type="password" class="form-control" name="LoginPassword" id="InputPassword" required>
+
+                    <div>
+                        <form action="homepage.php" method="post">
+                            <div class="container">
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h1>Registration</h1>
+                                        <p>Fill up the form with correct values.</p>
+                                        <hr class="mb-3">
+                                        <label for="firstname"><b>First Name</b></label>
+                                        <input class="form-control" id="firstname" type="text" name="firstname" required>
+
+                                        <label for="lastname"><b>Last Name</b></label>
+                                        <input class="form-control" id="lastname" type="text" name="lastname" required>
+
+                                        <label for="email"><b>Email Address</b></label>
+                                        <input class="form-control" id="email" type="email" name="email" required>
+
+                                        <label for="password"><b>Password</b></label>
+                                        <input class="form-control" id="password" type="password" name="password" required>
+                                        <hr class="mb-3">
+                                        <input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <button type="submit" class="btn btn-dark">Submit</button>
-                </form>
             </div>
         </div>
-        <p>* Indicates required field</p>
     </div>
+    <?php include __DIR__ . "/templates/footer.php"; ?>
 </body>
+
 </html>

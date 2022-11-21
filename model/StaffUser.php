@@ -2,34 +2,13 @@
 include_once __DIR__ . "/User.php";
 
 class Staff extends User {
-
-    // ========================= FIELDS =========================
-
     private $role;
     private $department;
-
-    public function __construct($role, $department, $id, $firstname, $lastname, $email, $password)
-    {
-        parent::__construct($id, $firstname, $lastname, $email, $password);
-
+    public function __construct($role, $department, $id, $firstname, $lastname, $email, $password){
         $this->role = $role;
         $this->department = $department;
     }
-
-    // ========================= METHODS =========================
-
-    public function __toString() {
-        return parent::__toString() . " - " . $this->role . " - " . $this->department;
-    }
-
-
-
-
-
-
-    // ==================== GETTERS & SETTERS ====================
-
-
+//get set
     public function getRole()
     {
         return $this->role;

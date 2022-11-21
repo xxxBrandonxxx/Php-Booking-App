@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://www.brabbu.com/en/inspiration-and-ideas/wp-content/uploads/2016/07/hotel26-1.jpg);
+}
+#RegNameErr,
+#RegEmailErr,
+#RegPassErr {
+    display: none;
+    color: red;
+}
+
+.hotel-image {
+    object-fit: cover;
+}
+
+.text {
+    color: white;
+}
+
+#githubIcon {
+    margin: 20px;
+}
+
+footer {
+    background-color: #084a8d;
+    width: 100%;
+}
